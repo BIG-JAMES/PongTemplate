@@ -119,5 +119,8 @@
   <ItemGroup>
     <None Include="Resources\pixil-frame-0 %2822%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POL-king-of-coins-short.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

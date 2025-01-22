@@ -54,6 +54,8 @@ namespace Pong
         //on project start up
         private void Form1_Load(object sender, EventArgs e)
         {
+            soundPlayer = new SoundPlayer(Properties.Resources.POL_king_of_coins_short);
+            soundPlayer.PlayLooping();
             player1dis.Parent = pictureBox1;
             player2dis.Parent = pictureBox1;
         }
@@ -61,85 +63,90 @@ namespace Pong
         //buttion imput
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
+            if(gameTimer.Enabled == true)
             {
-                case Keys.W:
-                    wPressed = true;
-                    break;
-                case Keys.S:
-                    sPressed = true;
-                    player1dis.Width = 120;
-                    player1dis.Height = 90;
-                    player1.Height = 90;
-                    player1.Y = 290;
-                    player1hit.X = 3000;
-                    player1dis.Image = Properties.Resources.crowchR;
-                    break;
-                case Keys.A:
-                    aPressed = true;
-                    break;
-                case Keys.D:
-                    dPressed = true;
-                    break;
+                switch (e.KeyCode)
+                {
+                    case Keys.W:
+                        wPressed = true;
+                        break;
+                    case Keys.S:
+                        sPressed = true;
+                        player1dis.Width = 120;
+                        player1dis.Height = 90;
+                        player1.Height = 90;
+                        player1.Y = 290;
+                        player1hit.X = 3000;
+                        player1dis.Image = Properties.Resources.crowchR;
+                        break;
+                    case Keys.A:
+                        aPressed = true;
+                        break;
+                    case Keys.D:
+                        dPressed = true;
+                        break;
 
-                case Keys.I:
-                    iPressed = true;
-                    break;
-                case Keys.K:
-                    kPressed = true;
-                    player1dis.Width = 120;
-                    player2dis.Height = 90;
-                    player2dis.Location = player2.Location;
-                    player2.Height = 90;
-                    player2.Y = 290;
-                    player2hit.X = 3000;
-                    player2dis.Image = Properties.Resources.crowchB;
-                    break;
-                case Keys.J:
-                    jPressed = true;
-                    break;
-                case Keys.L:
-                    lPressed = true;
-                    break;
+                    case Keys.I:
+                        iPressed = true;
+                        break;
+                    case Keys.K:
+                        kPressed = true;
+                        player1dis.Width = 120;
+                        player2dis.Height = 90;
+                        player2dis.Location = player2.Location;
+                        player2.Height = 90;
+                        player2.Y = 290;
+                        player2hit.X = 3000;
+                        player2dis.Image = Properties.Resources.crowchB;
+                        break;
+                    case Keys.J:
+                        jPressed = true;
+                        break;
+                    case Keys.L:
+                        lPressed = true;
+                        break;
+                }
             }
 
         }
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
+            if(gameTimer.Enabled == true)
             {
-                case Keys.W:
-                    wPressed = false;
-                    break;
-                case Keys.S:
-                    sPressed = false;
-                    player1.Height = 180;
-                    player1.Y = 200;
-                    break;
-                case Keys.A:
-                    aPressed = false;
-                    break;
-                case Keys.D:
-                    dPressed = false;
-                    break;
+                switch (e.KeyCode)
+                {
+                    case Keys.W:
+                        wPressed = false;
+                        break;
+                    case Keys.S:
+                        sPressed = false;
+                        player1.Height = 180;
+                        player1.Y = 200;
+                        break;
+                    case Keys.A:
+                        aPressed = false;
+                        break;
+                    case Keys.D:
+                        dPressed = false;
+                        break;
 
 
-                case Keys.I:
-                    iPressed = false;
-                    break;
-                case Keys.K:
-                    kPressed = false;
-                    player2.Height = 180;
-                    player2.Y = 200;
-                    break;
-                case Keys.J:
-                    jPressed = false;
-                    break;
-                case Keys.L:
-                    lPressed = false;
-                    break;
+                    case Keys.I:
+                        iPressed = false;
+                        break;
+                    case Keys.K:
+                        kPressed = false;
+                        player2.Height = 180;
+                        player2.Y = 200;
+                        break;
+                    case Keys.J:
+                        jPressed = false;
+                        break;
+                    case Keys.L:
+                        lPressed = false;
+                        break;
+                }
             }
-
         }
 
         //game tick
@@ -350,6 +357,15 @@ namespace Pong
                 }
             }
 
+            if (player1.IntersectsWith(player2hit))
+            {
+                player2Score = player2Score - 10;
+            }
+            if (player2.IntersectsWith(player1hit))
+            {
+                player1Score = player1Score - 10;
+            }
+
             //walls 
             //right wall
             if (player1.X > 671)
@@ -417,6 +433,11 @@ namespace Pong
             {
                 player2DHB.Width = 0;
                 player2HB.Text = "DEAD";
+                winingtext.Visible = true;
+                winingtext.Text = "K.O RED is the VICTOR";
+                winingtext.ForeColor = Color.Red;
+                winingtext.BackColor = Color.DarkRed;
+                gameTimer.Enabled = false;
             }
 
             //player1 health bar
@@ -460,7 +481,14 @@ namespace Pong
             {
                 player1DHB.Width = 0;
                 player1HB.Text = "DEAD";
+                winingtext.Visible = true;
+                winingtext.Text = "K.O BLUE is the VICTOR";
+                winingtext.ForeColor = Color.Blue;
+                winingtext.BackColor = Color.DarkBlue;
+                gameTimer.Enabled = false;
+                
             }
+
 
             Refresh();
         }
@@ -674,6 +702,11 @@ namespace Pong
 
             BATB4.Enabled = false;
             BATB1.Enabled = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
