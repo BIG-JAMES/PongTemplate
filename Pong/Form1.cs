@@ -25,9 +25,8 @@ namespace Pong
         Rectangle player1hit = new Rectangle(3000, 200, 120, 40);
         Rectangle player2hit = new Rectangle(3000, 200, 120, 40);
         Rectangle hitsprieloco = new Rectangle(200, 200, 1, 1);
+        Rectangle hitsprieloco1 = new Rectangle(200, 200, 1, 1);
         SolidBrush blueBrush = new SolidBrush(Color.DodgerBlue);
-        SolidBrush TransparentBrush = new SolidBrush(Color.Transparent);
-        Pen whitepen = new Pen(Color.White);
 
         //health
         int player1Score = 10;
@@ -51,13 +50,130 @@ namespace Pong
         //soundPlayer
         SoundPlayer soundPlayer = new SoundPlayer();
 
+        //title screen 
+        private void playbutton_Click(object sender, EventArgs e)
+        {
+            playbutton.Visible = false;
+            closegamehome.Visible = false;
+            titlescreen.Image = Properties.Resources.pixil_frame_0__25_;
+
+            level1.Visible = true;
+            level2.Visible = true;
+            level3.Visible = true;
+            level4.Visible = true;
+            level5.Visible = true;
+            level6.Visible = true;
+            level1Text.Visible = true;
+            level2Text.Visible = true;
+            level3Text.Visible = true;
+            level4Text.Visible = true;
+            level5Text.Visible = true;
+            level6Text.Visible = true;
+
+        }
+        private void closegamehome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //playing level 1-6
+        private void level1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.pixil_frame_0__22_;
+
+            titlescreen.Visible = false;
+            level1.Visible = false;
+            level2.Visible = false;
+            level3.Visible = false;
+            level4.Visible = false;
+            level5.Visible = false;
+            level6.Visible = false;
+            level1Text.Visible = false;
+            level2Text.Visible = false;
+            level3Text.Visible = false;
+            level4Text.Visible = false;
+            level5Text.Visible = false;
+            level6Text.Visible = false;
+
+
+            gameTimer.Enabled = true;
+
+            //needs this to load & reset
+            this.Enabled = false;
+            Thread.Sleep(100);
+            this.Enabled = true;
+        }
+        private void level2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.pixil_frame_0__27_;
+
+            titlescreen.Visible = false;
+            level1.Visible = false;
+            level2.Visible = false;
+            level3.Visible = false;
+            level4.Visible = false;
+            level5.Visible = false;
+            level6.Visible = false;
+            level1Text.Visible = false;
+            level2Text.Visible = false;
+            level3Text.Visible = false;
+            level4Text.Visible = false;
+            level5Text.Visible = false;
+            level6Text.Visible = false;
+
+            gameTimer.Enabled = true;
+
+            //needs this to load & reset
+            this.Enabled = false;
+            Thread.Sleep(100);
+            this.Enabled = true;
+        }
+
         //on project start up
         private void Form1_Load(object sender, EventArgs e)
         {
-            soundPlayer = new SoundPlayer(Properties.Resources.POL_king_of_coins_short);
-            soundPlayer.PlayLooping();
             player1dis.Parent = pictureBox1;
             player2dis.Parent = pictureBox1;
+            titlescreen.Image = Properties.Resources.pixil_frame_0__24_;
+        }
+
+        //death screen 
+        private void home_Click(object sender, EventArgs e)
+        {
+            //resets and goes back home
+            titlescreen.Image = Properties.Resources.pixil_frame_0__24_;
+            titlescreen.Visible = true;
+            playbutton.Visible = true;
+            closegamehome.Visible = true;
+            home.Visible = false;
+            fightAgain.Visible = false;
+            closeGame.Visible = false;
+            player1Score = 10;
+            player2Score = 10;
+            winingtext.Visible = false;
+            player1.X = 40;
+            player2.X = 640;
+        }
+        private void fightAgain_Click(object sender, EventArgs e)
+        {
+            gameTimer.Enabled = true;
+            fightAgain.Visible = false;
+            home.Visible = false;
+            closeGame.Visible = false;
+            player1.X = 40;
+            player2.X = 640;
+            player1Score = 10;
+            player2Score = 10;
+            winingtext.Visible = false;
+
+            //needs this to load & reset
+            this.Enabled = false;
+            Thread.Sleep(100);
+            this.Enabled = true;
+        }
+        private void closeGame_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         //buttion imput
@@ -68,36 +184,57 @@ namespace Pong
                 switch (e.KeyCode)
                 {
                     case Keys.W:
-                        wPressed = true;
+                        if (RPA2.Enabled == false)
+                        {
+                            if (dPressed == false)
+                            {
+                                if (aPressed == false)
+                                {
+                                    if (sPressed == false)
+                                    {
+                                        RPA.Enabled = true;
+                                    }
+                                }
+                            }
+                        }
                         break;
                     case Keys.S:
                         sPressed = true;
                         player1dis.Width = 120;
-                        player1dis.Height = 90;
                         player1.Height = 90;
                         player1.Y = 290;
                         player1hit.X = 3000;
-                        player1dis.Image = Properties.Resources.crowchR;
+                        player1dis.Image = Properties.Resources.pixil_frame_0__34_;
                         break;
                     case Keys.A:
                         aPressed = true;
                         break;
                     case Keys.D:
                         dPressed = true;
+                        player1dis.Width = player1.Width;
                         break;
 
                     case Keys.I:
-                        iPressed = true;
+                        if (BPA2.Enabled == false)
+                        {
+                            if (jPressed == false)
+                            {
+                                if (kPressed == false)
+                                {
+                                    if (lPressed == false)
+                                    {
+                                        BPA.Enabled = true;
+                                    }
+                                }
+                            }
+                        }
                         break;
                     case Keys.K:
                         kPressed = true;
-                        player1dis.Width = 120;
-                        player2dis.Height = 90;
-                        player2dis.Location = player2.Location;
                         player2.Height = 90;
                         player2.Y = 290;
                         player2hit.X = 3000;
-                        player2dis.Image = Properties.Resources.crowchB;
+                        player2dis.Image = Properties.Resources.pixil_frame_0__33_1;
                         break;
                     case Keys.J:
                         jPressed = true;
@@ -128,6 +265,7 @@ namespace Pong
                         break;
                     case Keys.D:
                         dPressed = false;
+                        player1dis.Width = player1.Width;
                         break;
 
 
@@ -154,7 +292,8 @@ namespace Pong
         {
 
             //player1 display/Move player 1
-            player1dis.Location = player1.Location;
+            hitsprieloco1.X = player1.X;
+            player1dis.Location = hitsprieloco1.Location;
             if (aPressed == true && player1.X > 0)
             {
                 wPressed = false;
@@ -193,12 +332,11 @@ namespace Pong
                 }
                 player1.X += player1Speed;
             }
-            if (wPressed == true)
+            if (RPA.Enabled == true)
             {
-                if (sPressed == false)
+                if (RPA3.Enabled == false)
                 {
                     //punchung
-                    sPressed = false;
                     player1hit.X = player1.X + 70;
                     player1hit.Y = player1.Y + 30;
                     player1dis.Height = 180;
@@ -219,9 +357,8 @@ namespace Pong
                     {
                         //crouching
                         RAT1.Enabled = false;
-                        player1dis.Height = 90;
                         player1Speed = 0;
-                        player1dis.Image = Properties.Resources.crowchR;
+                        player1dis.Image = Properties.Resources.pixil_frame_0__34_;
                     }
                 }
                 else
@@ -267,7 +404,7 @@ namespace Pong
                         {
                             if (BAT4.Enabled == false)
                             {
-                                player2dis.Image = Properties.Resources.standingB;
+                                player2dis.Image = Properties.Resources.pixil_frame_0__29_;
                             }
                         }
                     }
@@ -287,19 +424,18 @@ namespace Pong
                         {
                             if (BATB4.Enabled == false)
                             {
-                                player2dis.Image = Properties.Resources.standingB;
+                                player2dis.Image = Properties.Resources.pixil_frame_0__29_;
                             }
                         }
                     }
                 }
                 player2.X += player2Speed;
             }
-            if (iPressed == true)
+            if (BPA.Enabled == true)
             {
-                if (kPressed == false)
+                if (BPA3.Enabled == false)
                 {
                     //punchung
-                    kPressed = false;
                     player2hit.X = player2.X - 70;
                     player2hit.Y = player2.Y + 30;
                     player2dis.Height = 180;
@@ -311,9 +447,8 @@ namespace Pong
             else
             {
                 //players original size & location
-                player2dis.Location = player2.Location;
+                player2dis.Location = hitsprieloco.Location;
                 player2dis.Height = 180;
-                player2dis.Width = 120;
                 //hitbox out of view
                 player2hit.X = 3000;
                 if (kPressed == true)
@@ -323,10 +458,8 @@ namespace Pong
                         //crouching
                         iPressed = false;
                         RAT2.Enabled = false;
-                        player2dis.Height = 90;
                         player2Speed = 0;
-                        player2dis.Image = Properties.Resources.crowchB;
-                        player2dis.Location = player2.Location;
+                        player2dis.Image = Properties.Resources.pixil_frame_0__33_1;
                     }
                 }
                 else
@@ -337,9 +470,10 @@ namespace Pong
                         player2Speed = 5;
                         if (jPressed == false)
                         {
+                            player2dis.Location = hitsprieloco.Location;
                             player2dis.Height = 180;
-                            player2dis.Width = 120;
-                            player2dis.Image = Properties.Resources.standingB;
+                            player2dis.Width = 200;
+                            player2dis.Image = Properties.Resources.pixil_frame_0__29_;
                             BAT1.Enabled = false;
 
                             iPressed = false;
@@ -393,6 +527,10 @@ namespace Pong
 
             //player2 health bar
 
+            if (player1Score == 10)
+            {
+                player2DHB.Width = 291;
+            }
             if (player1Score == 9)
             {
                 player2DHB.Width = 261;
@@ -429,7 +567,7 @@ namespace Pong
             {
                 player2DHB.Width = 29;
             }
-            if (player1Score < 0)
+            if (player1Score <= 0)
             {
                 player2DHB.Width = 0;
                 player2HB.Text = "DEAD";
@@ -438,9 +576,16 @@ namespace Pong
                 winingtext.ForeColor = Color.Red;
                 winingtext.BackColor = Color.DarkRed;
                 gameTimer.Enabled = false;
+                home.Visible = true;
+                fightAgain.Visible = true;
+                closeGame.Visible = true;
             }
 
             //player1 health bar
+            if (player2Score == 10)
+            {
+                player1DHB.Width = 291;
+            }
             if (player2Score == 9)
             {
                 player1DHB.Width = 261;
@@ -477,7 +622,7 @@ namespace Pong
             {
                 player1DHB.Width = 29;
             }
-            if ( player2Score < 0)
+            if ( player2Score <= 0)
             {
                 player1DHB.Width = 0;
                 player1HB.Text = "DEAD";
@@ -486,7 +631,9 @@ namespace Pong
                 winingtext.ForeColor = Color.Blue;
                 winingtext.BackColor = Color.DarkBlue;
                 gameTimer.Enabled = false;
-                
+                home.Visible = true;
+                fightAgain.Visible = true;
+                closeGame.Visible = true;
             }
 
 
@@ -498,6 +645,7 @@ namespace Pong
         {
             e.Graphics.FillRectangle(blueBrush, player1);
             e.Graphics.FillRectangle(blueBrush, player1hit);
+            e.Graphics.FillRectangle(blueBrush, hitsprieloco1);
 
             e.Graphics.FillRectangle(blueBrush, player2);
             e.Graphics.FillRectangle(blueBrush, player2hit);
@@ -513,6 +661,7 @@ namespace Pong
 
         //animations 
         // (R.A.T = red animation time) & (B.A.T = blue animation time)
+        // (R.P.A = red punching animation) & (B.P.A = blue punching animation)
 
         //red walking animation
         private void RAT1_Tick(object sender, EventArgs e)
@@ -607,29 +756,44 @@ namespace Pong
             RATB4.Enabled = false;
             RATB1.Enabled = false;
         }
-
-
+        //red punch animation
+        private void RPA_Tick(object sender, EventArgs e)
+        {
+            RPA2.Enabled = true;
+        }
+        private void RPA2_Tick(object sender, EventArgs e)
+        {
+            RPA.Enabled = false;
+            RPA2.Enabled = false;
+            RPA3.Enabled = true;
+        }
+        private void RPA3_Tick(object sender, EventArgs e)
+        {
+            RPA.Enabled = false;
+            RPA2.Enabled = false;
+            RPA3.Enabled = false;
+        }
 
         //blue walking animation
         private void BAT1_Tick(object sender, EventArgs e)
         {
             player2dis.Height = 180;
-            player2dis.Width = 120;
+            player2dis.Width = 200;
             player2hit.X = 3000;
             iPressed = false;
 
-            player2dis.Image = Properties.Resources.walkBI;
+            player2dis.Image = Properties.Resources.pixil_frame_0__30_;
             BAT1.Enabled = false;
             BAT2.Enabled = true;
         }
         private void BAT2_Tick(object sender, EventArgs e)
         {
             player2dis.Height = 180;
-            player2dis.Width = 120;
+            player2dis.Width = 200;
             player2hit.X = 3000;
             iPressed = false;
 
-            player2dis.Image = Properties.Resources.walkBII;
+            player2dis.Image = Properties.Resources.pixil_frame_0__31_;
             BAT2.Enabled = false;
             BAT3.Enabled = true;
 
@@ -638,11 +802,11 @@ namespace Pong
         private void BAT3_Tick(object sender, EventArgs e)
         {
             player2dis.Height = 180;
-            player2dis.Width = 120;
+            player2dis.Width = 200;
             player2hit.X = 3000;
             iPressed = false;
 
-            player2dis.Image = Properties.Resources.walkBIII;
+            player2dis.Image = Properties.Resources.pixil_frame_0__30_;
             BAT3.Enabled = false;
             BAT4.Enabled = true;
 
@@ -651,11 +815,11 @@ namespace Pong
         private void BAT4_Tick(object sender, EventArgs e)
         {
             player2dis.Height = 180;
-            player2dis.Width = 120;
+            player2dis.Width = 200;
             player2hit.X = 3000;
             iPressed = false;
 
-            player2dis.Image = Properties.Resources.walkBII;
+            player2dis.Image = Properties.Resources.pixil_frame_0__32_;
             BAT4.Enabled = false;
 
             BAT1.Enabled = false;
@@ -664,9 +828,9 @@ namespace Pong
         private void BATB1_Tick(object sender, EventArgs e)
         {
             player2dis.Height = 180;
-            player2dis.Width = 120;
+            player2dis.Width = 200;
             player2hit.X = 3000;
-            player2dis.Image = Properties.Resources.walkBII;
+            player2dis.Image = Properties.Resources.pixil_frame_0__30_;
 
             BATB1.Enabled = false;
             BATB2.Enabled = true;
@@ -674,9 +838,9 @@ namespace Pong
         private void BATB2_Tick(object sender, EventArgs e)
         {
             player2dis.Height = 180;
-            player2dis.Width = 120;
+            player2dis.Width = 200;
             player2hit.X = 3000;
-            player2dis.Image = Properties.Resources.walkBIII;
+            player2dis.Image = Properties.Resources.pixil_frame_0__31_;
 
             BATB2.Enabled = false;
             BATB3.Enabled = true;
@@ -685,9 +849,9 @@ namespace Pong
         private void BATB3_Tick(object sender, EventArgs e)
         {
             player2dis.Height = 180;
-            player2dis.Width = 120;
+            player2dis.Width = 200;
             player2hit.X = 3000;
-            player2dis.Image = Properties.Resources.walkBII;
+            player2dis.Image = Properties.Resources.pixil_frame_0__30_;
 
             BATB3.Enabled = false;
             BATB4.Enabled = true;
@@ -696,17 +860,29 @@ namespace Pong
         private void BATB4_Tick(object sender, EventArgs e)
         {
             player2dis.Height = 180;
-            player2dis.Width = 120;
+            player2dis.Width = 200;
             player2hit.X = 3000;
-            player2dis.Image = Properties.Resources.walkBI;
+            player2dis.Image = Properties.Resources.pixil_frame_0__32_;
 
             BATB4.Enabled = false;
             BATB1.Enabled = false;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        //blue punch animation
+        private void BPA_Tick(object sender, EventArgs e)
         {
-
+            BPA2.Enabled = true;
+        }
+        private void BPA2_Tick(object sender, EventArgs e)
+        {
+            BPA.Enabled = false;
+            BPA2.Enabled = false;
+            BPA3.Enabled = true;
+        }
+        private void BPA3_Tick(object sender, EventArgs e)
+        {
+            BPA.Enabled = false;
+            BPA2.Enabled = false;
+            BPA3.Enabled = false;
         }
     }
 }

@@ -122,5 +122,20 @@
   <ItemGroup>
     <None Include="Resources\POL-king-of-coins-short.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\pixil-frame-0 %2824%29.png" />
+    <None Include="Resources\pixil-frame-0 %2834%29.png" />
+    <None Include="Resources\pixil-frame-0 %2833%291.png" />
+    <None Include="Resources\pixil-frame-0 %2833%29.png" />
+    <None Include="Resources\pixil-frame-0 %2832%29.png" />
+    <None Include="Resources\pixil-frame-0 %2831%29.png" />
+    <None Include="Resources\pixil-frame-0 %2830%29.png" />
+    <None Include="Resources\pixil-frame-0 %2829%29.png" />
+    <None Include="Resources\pixil-frame-0 %2827%29.png" />
+    <None Include="Resources\pixil-frame-0 %2826%29.png" />
+    <None Include="Resources\pixil-frame-0 %2825%291.png" />
+    <None Include="Resources\pixil-frame-0 %2824%291.png" />
+    <Content Include="Resources\pixil-frame-0 %2825%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
