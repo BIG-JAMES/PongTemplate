@@ -57,6 +57,9 @@ namespace Pong
             closegamehome.Visible = false;
             titlescreen.Image = Properties.Resources.pixil_frame_0__25_;
 
+            soundPlayer = new SoundPlayer(Properties.Resources.Elden_Ring___Game_Start__Sound_Effect____ezmp3_cc____1___1_);
+            soundPlayer.Play();
+
             level1.Visible = true;
             level2.Visible = true;
             level3.Visible = true;
@@ -80,6 +83,9 @@ namespace Pong
         private void level1_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.pixil_frame_0__22_;
+
+            soundPlayer = new SoundPlayer(Properties.Resources.POL_king_of_coins_short);
+            soundPlayer.PlayLooping();
 
             titlescreen.Visible = false;
             level1.Visible = false;
@@ -106,6 +112,9 @@ namespace Pong
         private void level2_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.pixil_frame_0__27_;
+
+            soundPlayer = new SoundPlayer(Properties.Resources.POL_king_of_coins_short);
+            soundPlayer.PlayLooping();
 
             titlescreen.Visible = false;
             level1.Visible = false;
@@ -569,6 +578,9 @@ namespace Pong
             }
             if (player1Score <= 0)
             {
+                soundPlayer = new SoundPlayer(Properties.Resources.victory_85561);
+                soundPlayer.Play();
+
                 player2DHB.Width = 0;
                 player2HB.Text = "DEAD";
                 winingtext.Visible = true;
@@ -624,6 +636,9 @@ namespace Pong
             }
             if ( player2Score <= 0)
             {
+                soundPlayer = new SoundPlayer(Properties.Resources.victory_85561);
+                soundPlayer.Play();
+
                 player1DHB.Width = 0;
                 player1HB.Text = "DEAD";
                 winingtext.Visible = true;
@@ -883,6 +898,11 @@ namespace Pong
             BPA.Enabled = false;
             BPA2.Enabled = false;
             BPA3.Enabled = false;
+        }
+
+        private void titlescreen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
