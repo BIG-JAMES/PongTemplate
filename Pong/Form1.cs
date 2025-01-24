@@ -156,7 +156,7 @@ namespace Pong
         {
             pictureBox1.Image = Properties.Resources.pixil_frame_0__36_;
 
-            soundPlayer = new SoundPlayer(Properties.Resources.POL_king_of_coins_short);
+            soundPlayer = new SoundPlayer(Properties.Resources.Pixel_Drama);
             soundPlayer.PlayLooping();
 
             titlescreen.Visible = false;
