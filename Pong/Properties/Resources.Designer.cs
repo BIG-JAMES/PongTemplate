@@ -19,7 +19,7 @@ namespace Pong.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -215,6 +215,26 @@ namespace Pong.Properties {
         internal static System.Drawing.Bitmap pixil_frame_0__34_ {
             get {
                 object obj = ResourceManager.GetObject("pixil-frame-0 (34)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pixil_frame_0__35_ {
+            get {
+                object obj = ResourceManager.GetObject("pixil-frame-0 (35)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pixil_frame_0__36_ {
+            get {
+                object obj = ResourceManager.GetObject("pixil-frame-0 (36)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

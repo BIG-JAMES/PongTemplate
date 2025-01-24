@@ -64,14 +64,10 @@ namespace Pong
             level2.Visible = true;
             level3.Visible = true;
             level4.Visible = true;
-            level5.Visible = true;
-            level6.Visible = true;
             level1Text.Visible = true;
             level2Text.Visible = true;
             level3Text.Visible = true;
             level4Text.Visible = true;
-            level5Text.Visible = true;
-            level6Text.Visible = true;
 
         }
         private void closegamehome_Click(object sender, EventArgs e)
@@ -92,17 +88,14 @@ namespace Pong
             level2.Visible = false;
             level3.Visible = false;
             level4.Visible = false;
-            level5.Visible = false;
-            level6.Visible = false;
             level1Text.Visible = false;
             level2Text.Visible = false;
             level3Text.Visible = false;
             level4Text.Visible = false;
-            level5Text.Visible = false;
-            level6Text.Visible = false;
 
 
             gameTimer.Enabled = true;
+            punchingtimer.Enabled = true;
 
             //needs this to load & reset
             this.Enabled = false;
@@ -121,16 +114,63 @@ namespace Pong
             level2.Visible = false;
             level3.Visible = false;
             level4.Visible = false;
-            level5.Visible = false;
-            level6.Visible = false;
             level1Text.Visible = false;
             level2Text.Visible = false;
             level3Text.Visible = false;
             level4Text.Visible = false;
-            level5Text.Visible = false;
-            level6Text.Visible = false;
 
             gameTimer.Enabled = true;
+            punchingtimer.Enabled = true;
+
+            //needs this to load & reset
+            this.Enabled = false;
+            Thread.Sleep(100);
+            this.Enabled = true;
+        }
+        private void level3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.pixil_frame_0__35_;
+
+            soundPlayer = new SoundPlayer(Properties.Resources.POL_king_of_coins_short);
+            soundPlayer.PlayLooping();
+
+            titlescreen.Visible = false;
+            level1.Visible = false;
+            level2.Visible = false;
+            level3.Visible = false;
+            level4.Visible = false;
+            level1Text.Visible = false;
+            level2Text.Visible = false;
+            level3Text.Visible = false;
+            level4Text.Visible = false;
+
+            gameTimer.Enabled = true;
+            punchingtimer.Enabled = true;
+
+            //needs this to load & reset
+            this.Enabled = false;
+            Thread.Sleep(100);
+            this.Enabled = true;
+        }
+        private void level4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.pixil_frame_0__36_;
+
+            soundPlayer = new SoundPlayer(Properties.Resources.POL_king_of_coins_short);
+            soundPlayer.PlayLooping();
+
+            titlescreen.Visible = false;
+            level1.Visible = false;
+            level2.Visible = false;
+            level3.Visible = false;
+            level4.Visible = false;
+            level1Text.Visible = false;
+            level2Text.Visible = false;
+            level3Text.Visible = false;
+            level4Text.Visible = false;
+
+            gameTimer.Enabled = true;
+            punchingtimer.Enabled = true;
 
             //needs this to load & reset
             this.Enabled = false;
@@ -143,6 +183,7 @@ namespace Pong
         {
             player1dis.Parent = pictureBox1;
             player2dis.Parent = pictureBox1;
+
             titlescreen.Image = Properties.Resources.pixil_frame_0__24_;
         }
 
@@ -162,6 +203,10 @@ namespace Pong
             winingtext.Visible = false;
             player1.X = 40;
             player2.X = 640;
+            punchingtimer.Enabled = false;
+
+            soundPlayer = new SoundPlayer(Properties.Resources.Elden_Ring___Game_Start__Sound_Effect____ezmp3_cc____1___1_);
+            soundPlayer.Play();
         }
         private void fightAgain_Click(object sender, EventArgs e)
         {
@@ -179,6 +224,9 @@ namespace Pong
             this.Enabled = false;
             Thread.Sleep(100);
             this.Enabled = true;
+
+            soundPlayer = new SoundPlayer(Properties.Resources.POL_king_of_coins_short);
+            soundPlayer.PlayLooping();
         }
         private void closeGame_Click(object sender, EventArgs e)
         {
@@ -500,15 +548,6 @@ namespace Pong
                 }
             }
 
-            if (player1.IntersectsWith(player2hit))
-            {
-                player2Score = player2Score - 10;
-            }
-            if (player2.IntersectsWith(player1hit))
-            {
-                player1Score = player1Score - 10;
-            }
-
             //walls 
             //right wall
             if (player1.X > 671)
@@ -585,7 +624,7 @@ namespace Pong
                 player2HB.Text = "DEAD";
                 winingtext.Visible = true;
                 winingtext.Text = "K.O RED is the VICTOR";
-                winingtext.ForeColor = Color.Red;
+                winingtext.ForeColor = Color.LightPink;
                 winingtext.BackColor = Color.DarkRed;
                 gameTimer.Enabled = false;
                 home.Visible = true;
@@ -643,7 +682,7 @@ namespace Pong
                 player1HB.Text = "DEAD";
                 winingtext.Visible = true;
                 winingtext.Text = "K.O BLUE is the VICTOR";
-                winingtext.ForeColor = Color.Blue;
+                winingtext.ForeColor = Color.LightBlue;
                 winingtext.BackColor = Color.DarkBlue;
                 gameTimer.Enabled = false;
                 home.Visible = true;
@@ -653,6 +692,17 @@ namespace Pong
 
 
             Refresh();
+        }
+        private void punchingtimer_Tick(object sender, EventArgs e)
+        {
+            if (player1.IntersectsWith(player2hit))
+            {
+                player2Score = player2Score - 1;
+            }
+            if (player2.IntersectsWith(player1hit))
+            {
+                player1Score = player1Score - 1;
+            }
         }
 
         //drawing player & hitbox
@@ -898,11 +948,6 @@ namespace Pong
             BPA.Enabled = false;
             BPA2.Enabled = false;
             BPA3.Enabled = false;
-        }
-
-        private void titlescreen_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

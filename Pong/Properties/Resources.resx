@@ -118,23 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pixil-frame-0 (33)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (33).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="walkBIII" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (23).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pixil-frame-0 (29)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (29).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="crowchR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixil-frame-0 (10)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pixil-frame-0 (33)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (33)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="walkBI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (17).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="walkBII" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pixil-frame-0 (35)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (35).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (10).png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="walkRIII" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixil-frame-0 (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,64 +136,76 @@
   <data name="crowchB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixil-frame-0 (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="walkBI" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (17).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pixil-frame-0 (27)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (27).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pixil-frame-0 (30)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (30).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="standingR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (8)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="POL_king_of_coins_short" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\POL-king-of-coins-short.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="standingB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixil-frame-0 (14).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pixil-frame-0 (25)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (25)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="punchingR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pixil-frame-0 (26)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixil-frame-0 (26).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="standingR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (8)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pixil-frame-0 (32)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixil-frame-0 (32).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pixil-frame-0 (31)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (31).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pixil-frame-0 (24)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (24)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pixil-frame-0 (22)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (22).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="walkRII" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pixil-frame-0 (29)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (29).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="walkRI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixil-frame-0 (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (10).png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pixil-frame-0 (30)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (30).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="punchingB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="POL_king_of_coins_short" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\POL-king-of-coins-short.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pixil-frame-0 (34)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixil-frame-0 (34).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pixil-frame-0 (25)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (25)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixil-frame-0 (22)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (22).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="walkBII" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="walkBIII" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (23).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixil-frame-0 (24)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (24)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="punchingR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Elden_Ring___Game_Start__Sound_Effect____ezmp3_cc____1___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Elden Ring _ Game Start [Sound Effect] [ ezmp3.cc ] (1) (1).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="victory_85561" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\victory-85561.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="walkRII" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixil-frame-0 (33)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (33).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixil-frame-0 (27)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (27).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixil-frame-0 (33)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (33)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixil-frame-0 (34)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (34).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixil-frame-0 (31)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (31).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="punchingB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixil-frame-0 (36)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixil-frame-0 (36).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
